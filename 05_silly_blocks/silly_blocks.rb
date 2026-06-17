@@ -1,14 +1,14 @@
 def reverser
   text = yield
-  text.split.map { |cuvant| cuvant.reverse }.join(" ")
+  text.split.map { |word| word.reverse }.join(" ")
 end
 
 def adder(numar = 1)
   yield + numar
 end
 
-def repeater(de_cate_ori = 1)
-  de_cate_ori.times do
+def repeater(how_many_times = 1)
+  how_many_times.times do
     yield
   end
 end

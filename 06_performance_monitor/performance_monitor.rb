@@ -1,12 +1,12 @@
-def measure(de_cate_ori = 1)
-  timp_total = 0
+def measure(how_many = 1)
+  total = 0
   
-  de_cate_ori.times do
+  how_many.times do
     start_time = Time.now
     yield
     end_time = Time.now
-    timp_total += (end_time - start_time)
+    total += (end_time - start_time)
   end
   
-  timp_total / de_cate_ori
+  total / how_many
 end

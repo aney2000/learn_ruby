@@ -6,10 +6,10 @@ class Timer
   end
 
   def time_string
-    ore = @seconds / 3600
-    minute = (@seconds % 3600) / 60
-    secunde_ramase = @seconds % 60
+    hours = @seconds / 3600
+    minutes = (@seconds % 3600) / 60
+    seconds = @seconds % 60
     
-    [ore, minute, secunde_ramase].map { |numar| "%02d" % numar }.join(":")
+    [hours, minutes, seconds].map { |num| "%02d" % num }.join(":")
   end
 end

@@ -1,25 +1,25 @@
 def translate(text)
-  vocale = ["a", "e", "i", "o", "u"]
+  vowels = ["a", "e", "i", "o", "u"]
   ay = "ay"
   
-  cuvinte = text.split
-  cuvinte_traduse = []
+  words = text.split
+  words_translated = []
   
-  cuvinte.each do |cuvant|
-    if vocale.include?(cuvant[0])
-      cuvinte_traduse << cuvant + ay
+  words.each do |word|
+    if vowels.include?(word[0])
+      words_translated << word + ay
     else
-      while !vocale.include?(cuvant[0])
+      while !vowels.include?(word[0])
         
-        if cuvant[0..1] == "qu"
-          cuvant = cuvant[2..-1] + "qu"
+        if word[0..1] == "qu"
+          word = word[2..-1] + "qu"
         else
-          cuvant = cuvant[1..-1] + cuvant[0]
+          word = word[1..-1] + word[0]
         end
         
       end
-      cuvinte_traduse << cuvant + ay
+      words_translated << word + ay
     end
   end
-  cuvinte_traduse.join(" ")
+  words_translated.join(" ")
 end

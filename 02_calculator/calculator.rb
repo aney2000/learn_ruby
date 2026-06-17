@@ -9,34 +9,34 @@ end
 def sum(array)
   total = 0
   
-  array.each do |numar|
-    total = total + numar
+  array.each do |num|
+    total = total + num
   end
   
   total
 end
 
 def multiply(*array)
-  numere = array.flatten
+  nums = array.flatten
   total = 1
-  numere.each do |numar|
-    total = total * numar
+  nums.each do |num|
+    total = total * num
   end
   total
 end
 
-def power(baza, exponent)
-  baza ** exponent
+def power(base, exponent)
+  base ** exponent
 end
 
 def factorial(a)
   return 1 if a == 0
   
-  rezultat = 1
+  result = 1
   
-  (1..a).each do |numar|
-    rezultat = rezultat * numar
+  (1..a).each do |num|
+    result = result * num
   end
   
-  rezultat
+  result
 end

@@ -6,12 +6,12 @@ def shout(text)
   text.upcase
 end
 
-def repeat(text, numar = 2)
-  ([text] * numar).join(" ")
+def repeat(text, num = 2)
+  ([text] * num).join(" ")
 end
 
-def start_of_word(text, numar=1)
-  text[0, numar]
+def start_of_word(text, num=1)
+  text[0, num]
 end
 
 def first_word(text)
@@ -19,9 +19,9 @@ def first_word(text)
 end
 
 def titleize(text)
-  cuvinte_mici = ["and", "over", "the"]
+  small_words = ["and", "over", "the"]
   
-  text.split.map.with_index do |cuvant, index|
-    (index == 0 || !cuvinte_mici.include?(cuvant)) ? cuvant.capitalize : cuvant
+  text.split.map.with_index do |word, index|
+    (index == 0 || !small_words.include?(word)) ? word.capitalize : word
   end.join(" ")
 end

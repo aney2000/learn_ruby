@@ -7,17 +7,17 @@ class Book
   end
 
   def title
-    cuvinte_mici = ["and", "or", "over", "the", "a", "an", "in", "of"]
-    cuvinte = @title.split(" ")
-    cuvinte_formatate = cuvinte.map.with_index do |cuvant, index|
+    small_words = ["and", "or", "over", "the", "a", "an", "in", "of"]
+    words = @title.split(" ")
+    formated_words = words.map.with_index do |word, index|
       if index == 0
-        cuvant.capitalize
-      elsif cuvinte_mici.include?(cuvant)
-        cuvant.downcase
+        word.capitalize
+      elsif small_words.include?(word)
+        word.downcase
       else
-        cuvant.capitalize
+        word.capitalize
       end
     end
-    cuvinte_formatate.join(" ")
+    formated_words.join(" ")
   end
 end
