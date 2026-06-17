@@ -1,5 +1,4 @@
 class Book
-  attr_accessor :author
   attr_writer :title
 
   def initialize(title = "")
