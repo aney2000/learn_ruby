@@ -1,11 +1,9 @@
 class Friend
   def greeting(name = nil)
-    name ||= "world"
-
-    if name == "world"
-      "Hello!"
-    else
+    if name
       "Hello, #{name}!"
+    else
+      "Hello!"
     end
   end
 end
