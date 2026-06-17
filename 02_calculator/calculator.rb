@@ -30,7 +30,7 @@ def power(base, exponent)
 end
 
 def factorial(a)
-  return 1 if a == 0
+  return 1 if a == 0 || a == 1
   
   result = 1
   
