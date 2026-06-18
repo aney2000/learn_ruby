@@ -68,5 +68,12 @@ describe "#translate" do
   # Test-driving bonus:
   # * write a test asserting that capitalized words are still capitalized (but with a different initial capital letter, of course)
   # * retain the punctuation from the original phrase
+  it "retains capitalization of the original word" do
+    expect(translate("Banana")).to eq("Ananabay")
+  end
+
+  it "retains punctuation at the end of a phrase" do
+    expect(translate("the quick brown fox!")).to eq("ethay ickquay ownbray oxfay!")
+  end
 
 end
