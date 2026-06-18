@@ -5,11 +5,15 @@ class Timer
     @seconds = 0
   end
 
+  def padded(num)
+    "%02d" % num
+  end
+
   def time_string
     hours = @seconds / 3600
     minutes = (@seconds % 3600) / 60
     seconds = @seconds % 60
     
-    [hours, minutes, seconds].map { |num| "%02d" % num }.join(":")
+    "#{padded(hours)}:#{padded(minutes)}:#{padded(seconds)}"
   end
 end
